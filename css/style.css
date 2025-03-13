@@ -55,8 +55,7 @@
 
 .embedded:hover {
   color: transparent;
-  outline: 1px solid black;
-  background-color: yellow;
+  background-color: #fff7bf;
   position: relative;
 }
 
@@ -65,5 +64,5 @@
   position: absolute;
   top: 0;
   left: 50%;
-  color: #000;
+  color: #594d00;
 }
