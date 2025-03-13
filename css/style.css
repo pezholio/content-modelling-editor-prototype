@@ -1,0 +1,69 @@
+.js-content-block-editor-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.js-content-block-editor-textarea, .js-content-block-editor-overlay {
+  /* Both elements need the same text and space styling so they are directly on top of each other */
+  height: 350px;
+}
+
+.js-content-block-editor-textarea, .js-content-block-editor-overlay {
+  /* In the same place */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Move the textarea in front of the result */
+
+.js-content-block-editor-textarea {
+  z-index: 1;
+}
+.js-content-block-editor-overlay {
+  z-index: 0;
+  position: static;
+}
+
+
+/* Make textarea almost completely transparent */
+
+.js-content-block-editor-textarea {
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+  caret-color: #000;
+}
+
+/* Can be scrolled */
+.js-content-block-editor-textarea, .js-content-block-editor-overlay {
+  overflow: auto;
+  white-space: pre-line;
+}
+
+/* No resize on textarea */
+.js-content-block-editor-textarea {
+  resize: none;
+}
+
+.embedded {
+  text-decoration: underline dotted;
+  z-index: 3;
+  position: relative;
+  cursor: pointer;
+}
+
+.embedded:hover {
+  color: transparent;
+  outline: 1px solid black;
+  background-color: yellow;
+  position: relative;
+}
+
+.embedded:hover::before {
+  content: attr(data-value);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: #000;
+}
