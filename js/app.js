@@ -10,6 +10,9 @@ const contentBlockData = {
     "name": "Rate 1",
     "type": "Pension Rate",
     "value": "£400.00"
+  },
+  "b979187f-c031-4388-8259-f0e69f089d84": {
+    "value": "£223.12"
   }
 }
 
@@ -46,6 +49,7 @@ if (module) {
 
       const highlight = document.createElement('span');
       highlight.dataset['value'] = contentBlockData[uuid].value
+      highlight.dataset['type'] = contentBlockData[uuid].type
       highlight.innerText = item[0]
       highlight.classList.add("embedded")
 

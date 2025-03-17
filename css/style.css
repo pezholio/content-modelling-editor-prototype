@@ -47,22 +47,32 @@
 }
 
 .embedded {
-  text-decoration: underline dotted;
+  outline: 3px solid #ffdd00;
   z-index: 3;
   position: relative;
   cursor: pointer;
 }
 
-.embedded:hover {
-  color: transparent;
-  background-color: #fff7bf;
-  position: relative;
-}
-
-.embedded:hover::before {
+.embedded:before {
   content: attr(data-value);
   position: absolute;
   top: 0;
-  left: 50%;
-  color: #594d00;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.embedded:after {
+  content: attr(data-type);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffdd00;
+  font-size: 0.8em;
+}
+
+.embedded:hover::before {
+  content: "";
+  background-color: transparent;
 }
