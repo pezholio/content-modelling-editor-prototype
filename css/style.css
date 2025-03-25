@@ -61,6 +61,7 @@
   background-color: #fff;
   width: 100%;
   text-align: center;
+  display: inline-block;
 }
 
 .embedded:after {
@@ -75,4 +76,9 @@
 .embedded:hover::before {
   content: "";
   background-color: transparent;
+}
+
+#container {
+  height: 400px;
+  border: 2px solid #0b0c0c;
 }
